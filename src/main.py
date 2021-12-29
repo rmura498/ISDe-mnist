@@ -12,7 +12,7 @@ test_error = np.zeros(shape=(n_rep,))
 for r in range(n_rep):
     print(r)
     x_tr, y_tr, x_ts, y_ts = split_data(x, y, n_tr=1000)
-    clf = NMC(avg=True)
+    clf = NMC(robust_estimation=True)
     clf.fit(x_tr, y_tr)
     plot_ten_digits(clf.centroids)
     ypred = clf.predict(x_ts)
