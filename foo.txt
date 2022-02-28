@@ -1,1 +1,6 @@
 
+if (mkfifo("public_pipe", PIPE_PERMISSIONS) == -1)
+{
+perror("Nothing workd");
+exit(-1000);
+}
